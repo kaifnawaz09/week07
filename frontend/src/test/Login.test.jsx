@@ -38,11 +38,11 @@ describe("Login page", () => {
   it("displays the login form", () => {
     renderLogin();
 
-    expect(
-      screen.getByText(
-        "KoalaTech University"
-      )
-    ).toBeInTheDocument();
+        expect(
+      screen.getByRole("textbox", {
+        name: /username/i,
+      })
+    ).toBeNull();
 
     expect(
       screen.getByRole("textbox", {
