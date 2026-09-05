@@ -42,7 +42,7 @@ describe("Login page", () => {
       screen.getByRole("textbox", {
         name: /username/i,
       })
-    ).toBeNull();
+    ).toBeInTheDocument();
 
     expect(
       screen.getByRole("textbox", {
